@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	int a, b, c, d, dcount;
+	int a, b, c, d;
 
 	for (a = 0; a <= 9; a++)
 	{
