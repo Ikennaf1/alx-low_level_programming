@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	int a, b, c, d;
+	int a, b, c, d, dcount;
 
 	for (a = 0; a <= 9; a++)
 	{
@@ -14,6 +14,9 @@ int main(void)
 			for (c = a; c <= 9; c++)
 			{
 				for (d = (d == 10 && b == 0) ? 0 : (b + 1); d <= 9; d++)
+				//dcount = 0;
+
+				//for (d = (d == 10 && b == 0) ? 0 : (b + 1); dcount <= 9; dcount++, d++)
 				{
 					putchar((a % 10) + '0');
 					putchar((b % 10) + '0');
