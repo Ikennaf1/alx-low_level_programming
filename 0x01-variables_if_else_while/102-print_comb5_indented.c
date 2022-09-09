@@ -17,17 +17,17 @@ int main(void)
 				{
 					if (((c + d) > (a + b) && c >= a) || a < b)
 					{
-					putchar((a % 10) + '0');
-					putchar((b % 10) + '0');
-					putchar(' ');
-					putchar((c % 10) + '0');
-					putchar((d % 10) + '0');
+						putchar((a % 10) + '0');
+						putchar((b % 10) + '0');
+						putchar(' ');
+						putchar((c % 10) + '0');
+						putchar((d % 10) + '0');
 
-					if (a + b + c == 179 && c == 9)
-						break;
+						if (a + b + c == 179 && c == 9)
+							break;
 
-					putchar(',');
-					putchar(' ');
+						putchar(',');
+						putchar(' ');
 					}
 				}
 			}
