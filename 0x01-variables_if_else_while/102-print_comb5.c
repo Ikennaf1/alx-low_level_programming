@@ -24,10 +24,14 @@ int main(void)
 					putchar((d % 10) + '0');
 
 					if (a + b + c + d == 179 && a == 9)
+					{
 						break;
-
-					putchar(',');
-					putchar(' ');
+					}
+					else
+					{
+						putchar(',');
+						putchar(' ');
+					}
 					}
 				}
 			}
