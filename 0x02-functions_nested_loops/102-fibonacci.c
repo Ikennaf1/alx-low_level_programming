@@ -23,4 +23,6 @@ int main(void)
 		printf(", %ld", curr);
 	}
 	printf("\n");
+
+	return (0);
 }
