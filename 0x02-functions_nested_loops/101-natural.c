@@ -2,9 +2,9 @@
 
 /**
  * main - Prints some natural numbers up to 1024
- * Return: Always void
+ * Return: Always zero
  */
-void main(void)
+int main(void)
 {
 	int sum = 0, n;
 
@@ -14,4 +14,6 @@ void main(void)
 			sum += n;
 	}
 	printf("%d", sum);
+
+	return (0);
 }
