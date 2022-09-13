@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int x, temp, count = 50;
+	int x;
 	long int prev = 1;
 	long int curr = 2;
 
