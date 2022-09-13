@@ -23,15 +23,18 @@ void times_table(void)
 
 				if (product >= 81)
 					break;
+
+				_putchar(',');
+				_putchar(' ');
 			}
 
 			if (product < 10)
 			{
 				_putchar(units + '0');
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
 			}
-
-			_putchar(',');
-			_putchar(' ');
 		}
 
 		_putchar('\n');
