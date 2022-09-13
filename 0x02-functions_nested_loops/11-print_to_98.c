@@ -24,12 +24,11 @@ void print_to_98(int n)
 			{
 				_putchar((n / 10) + '0');
 				_putchar((n % 10) + '0');
-				continue;
 			}
 			else if (n >= 100)
 			{
 				_putchar((n / 100) + '0');
-				_putchar((n / 10) + '0');
+				_putchar(((n / 10) % 10) + '0');
 				_putchar((n % 10) + '0');
 			}
 
@@ -60,13 +59,19 @@ void nlt98(int n)
 			{
 				_putchar('-');
 
-				if ((n / 10) == 0)
+				if (n > -9)
 				{
 					_putchar(((n % 10) * -1) + '0');
 				}
-				else if ((n / 10) != 0)
+				else if (n < -9)
 				{
 					_putchar(((n / 10) * -1) + '0');
+					_putchar(((n % 10) * -1) + '0');
+				}
+				else
+				{
+					_putchar(((n / 100) * -1) + '0');
+					_putchar((((n / 10) % 10) * -1) + '0');
 					_putchar(((n % 10) * -1) + '0');
 				}
 			}
