@@ -7,26 +7,26 @@
 int main(void)
 {
 	int x;
-	unsigned long long int prev = 1;
-	unsigned long long int curr = 2;
+	double prev = 1;
+	double curr = 2;
 
 	for (x = 1; x <= 98; x++)
 	{
 		if (x == 1)
 		{
-			printf("%llu", prev);
+			printf("%.0lf", prev);
 			continue;
 		}
 		if (x == 2)
 		{
-			printf(", %llu", curr);
+			printf(", %.0lf", curr);
 			continue;
 		}
 
 		curr += prev;
 		prev = curr - prev;
 
-		printf(", %llu", curr);
+		printf(", %.0lf", curr);
 	}
 	printf("\n");
 
