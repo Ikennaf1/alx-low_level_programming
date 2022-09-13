@@ -25,7 +25,7 @@ void jack_bauer(void)
 				}
 			}
 
-			if ((a + b + c + d) == 211 && a == 50)
+			if ((a + b + c + d) == 211 && a == 50 && b == 51)
 				break;
 		}
 	}
