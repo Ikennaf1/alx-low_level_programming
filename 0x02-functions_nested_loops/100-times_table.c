@@ -7,9 +7,8 @@
  */
 void print_times_table(int n)
 {
-	if (n < 0 || n > 15)
-		return (0);
-
+	if (n > 0 && n < 15)
+	{
 	int x, y, product;
 
 	for (x = 0; x <= n; x++)
@@ -46,5 +45,6 @@ void print_times_table(int n)
 			}
 			_putchar('\n');
 		}
+	}
 	}
 }
