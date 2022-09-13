@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+/**
+ * main - Prints some natural numbers up to 1024
+ * Return: Always void
+ */
+void main(void)
+{
+	int sum = 0, n;
+
+	for (n = 1; n < 1024; n++)
+	{
+		if ((n % 3 == 0) || (n % 5 == 0)
+			sum += n;
+	}
+	printf("%d", sum);
+}
