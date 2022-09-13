@@ -7,8 +7,8 @@
 int main(void)
 {
 	int x;
-	long unsigned int prev = 1;
-	long unsigned int curr = 2;
+	unsigned long int prev = 1;
+	unsigned long int curr = 2;
 
 	for (x = 1; x <= 98; x++)
 	{
