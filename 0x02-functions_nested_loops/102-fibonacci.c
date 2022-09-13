@@ -7,15 +7,15 @@
 int main(void)
 {
 	int x, temp, count = 50;
-	int prev = 1;
-	int curr = 2;
+	long int prev = 1;
+	long int curr = 2;
 
 	for (x = 1; x <= 50; x++)
 	{
 		if (x == 1)
-			printf("%d", prev);
+			printf("%ld", prev);
 		if (x == 2)
-			printf(", %d", curr);
+			printf(", %ld", curr);
 
 		curr += prev;
 		prev = curr - prev;
