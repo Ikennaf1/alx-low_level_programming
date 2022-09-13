@@ -18,14 +18,13 @@ void times_table(void)
 
 			if (product > 9)
 			{
+				_putchar(',');
+				_putchar(' ');
 				_putchar(tens + '0');
 				_putchar(units + '0');
 
 				if (product >= 81)
 					break;
-
-				_putchar(',');
-				_putchar(' ');
 			}
 
 			if (product < 10)
