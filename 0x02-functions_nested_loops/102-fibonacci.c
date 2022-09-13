@@ -13,9 +13,15 @@ int main(void)
 	for (x = 1; x <= 50; x++)
 	{
 		if (x == 1)
+		{
 			printf("%ld", prev);
+			continue;
+		}
 		if (x == 2)
+		{
 			printf(", %ld", curr);
+			continue;
+		}
 
 		curr += prev;
 		prev = curr - prev;
