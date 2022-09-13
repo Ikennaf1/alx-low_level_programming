@@ -20,7 +20,7 @@ void print_times_table(int n)
 			if (product < 10)
 			{
 				_putchar(product + '0');
-				if ((x == 0 && y == n) || (x * (y + 1) > 9) || (x == n && y == n)
+				if ((y == n) || (x * (y + 1) > 9))
 					continue;
 				_putchar(',');
 				_putchar(' ');
