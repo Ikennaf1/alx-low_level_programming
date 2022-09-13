@@ -22,11 +22,11 @@ void jack_bauer(void)
 					_putchar(c);
 					_putchar(d);
 					_putchar('\n');
-
-					if ((a + b + c + d == 211) && (a == 50))
-						break;
 				}
 			}
+
+			if ((a + b + c + d) == 211 && a == 50)
+				break;
 		}
 	}
 }
