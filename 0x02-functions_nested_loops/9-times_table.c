@@ -30,6 +30,10 @@ void times_table(void)
 			if (product < 10)
 			{
 				_putchar(units + '0');
+
+				if (x * (y + 1) > 9)
+					continue;
+
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
