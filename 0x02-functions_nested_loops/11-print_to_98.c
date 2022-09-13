@@ -59,11 +59,11 @@ void nlt98(int n)
 			{
 				_putchar('-');
 
-				if (n > -9)
+				if (n >= -9)
 				{
 					_putchar(((n % 10) * -1) + '0');
 				}
-				else if (n < -9)
+				else if (n < -9 && n > -100)
 				{
 					_putchar(((n / 10) * -1) + '0');
 					_putchar(((n % 10) * -1) + '0');
