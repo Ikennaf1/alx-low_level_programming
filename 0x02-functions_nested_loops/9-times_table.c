@@ -34,6 +34,9 @@ void times_table(void)
 				if (x * (y + 1) > 9)
 					continue;
 
+				if (x == 0 && y == 9)
+					continue;
+
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
