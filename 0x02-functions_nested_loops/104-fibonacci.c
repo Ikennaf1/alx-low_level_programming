@@ -31,14 +31,14 @@ int main(void)
 	prev_rem = prev % 1000000000;
 	div = curr / 1000000000;
 	rem = curr % 1000000000;
-	for (x = 90; x <= 100; x++)
+	for (x = 92; x <= 100; x++)
 	{
-		printf(", %lu", div + (rem / 1000000000));
-		printf("%lu", rem % 1000000000);
 		div += prev_div;
 		prev_div = div - prev_div;
 		rem += prev_rem;
 		prev_rem = rem - prev_rem;
+		printf(", %lu", div + (rem / 1000000000));
+		printf("%lu", rem % 1000000000);	
 	}
 	printf("\n");
 	return (0);
