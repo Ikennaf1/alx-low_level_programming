@@ -15,19 +15,19 @@ int main(void)
 	{
 		if (x == 1)
 		{
-			printf("%" PRId64, prev);
+			printf("%jd", prev);
 			continue;
 		}
 		if (x == 2)
 		{
-			printf(", %" PRId64, curr);
+			printf(", %jd", curr);
 			continue;
 		}
 
 		curr += prev;
 		prev = curr - prev;
 
-		printf(", %" PRId64, curr);
+		printf(", %jd", curr);
 	}
 	printf("\n");
 
