@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdint.h>
 
 /**
  * main - Prints the fibonacci sequence
@@ -7,26 +8,26 @@
 int main(void)
 {
 	int x;
-	double prev = 1;
-	double curr = 2;
+	int64_t prev = 1;
+	int64_t curr = 2;
 
 	for (x = 1; x <= 98; x++)
 	{
 		if (x == 1)
 		{
-			printf("%.0lf", prev);
+			printf("%" PRId64, prev);
 			continue;
 		}
 		if (x == 2)
 		{
-			printf(", %.0lf", curr);
+			printf(", %" PRId64, curr);
 			continue;
 		}
 
 		curr += prev;
 		prev = curr - prev;
 
-		printf(", %.0lf", curr);
+		printf(", %" PRId64, curr);
 	}
 	printf("\n");
 
