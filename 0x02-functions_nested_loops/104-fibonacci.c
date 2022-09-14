@@ -11,7 +11,7 @@ int main(void)
 	unsigned long int div = 0, rem = 0;
 	unsigned int x = 0;
 
-	for (x = 1; x <= 98; x++)
+	for (x = 1; x <= 91; x++)
 	{
 		if (x == 1)
 		{
