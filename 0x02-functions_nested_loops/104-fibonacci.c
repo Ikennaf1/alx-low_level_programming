@@ -9,7 +9,7 @@ int main(void)
 {
 	unsigned long int prev_div, prev_rem, prev = 1, curr = 2;
 	unsigned long int div = 0, rem = 0;
-	unsigned int x, max_reached = 0;
+	unsigned int x = 0;
 
 	for (x = 1; x <= 98; x++)
 	{
@@ -23,26 +23,22 @@ int main(void)
 			printf(", %lu", curr);
 			continue;
 		}
-		if ((curr + prev) > ULONG_MAX)
-		{
-			if (max_reached == 0)
-			{
-				prev_div = (curr + prev) / 10000000000;
-				prev_rem = (curr + prev) % 10000000000;
-				max_reached = 1;
-			}
-			div = (prev_div + prev_rem) / 10000000000;
-			rem = (prev_div + prev_rem) % 10000000000;
-			prev_div = (div + rem) / 10000000000;
-			prev_rem = (div + rem) % 10000000000;
-			printf(", %lu%lu", div, rem);
-		}
-		else
-		{
-			curr += prev;
-			prev = curr - prev;
-			printf(", %lu", curr);
-		}
+		curr += prev;
+		prev = curr - prev;
+		printf(", %lu", curr);
+	}
+	prev_div = prev / 1000000000;
+	prev_rem = prev % 1000000000;
+	div = curr / 1000000000;
+	rem = curr % 1000000000;
+	for (x = 92; x <= 98; x++)
+	{
+		printf(", %lu", div + (rem / 1000000000));
+		printf("%lu", rem % 1000000000);
+		div += prev_div;
+		prev_div = div - prev_div;
+		rem += prev_rem;
+		prev_rem = rem - prev_rem;
 	}
 	printf("\n");
 	return (0);
