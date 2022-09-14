@@ -31,7 +31,7 @@ int main(void)
 	prev_rem = prev % 1000000000;
 	div = curr / 1000000000;
 	rem = curr % 1000000000;
-	for (x = 92; x < 99; x++)
+	for (x = 91; x < 99; x++)
 	{
 		printf(", %lu", div + (rem / 1000000000));
 		printf("%lu", rem % 1000000000);
