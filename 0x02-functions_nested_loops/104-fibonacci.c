@@ -8,26 +8,26 @@
 int main(void)
 {
 	int x;
-	int64_t prev = 1;
-	int64_t curr = 2;
+	unsigned long int prev = 1;
+	unsigned long int curr = 2;
 
 	for (x = 1; x <= 98; x++)
 	{
 		if (x == 1)
 		{
-			printf("%jd", prev);
+			printf("%lu", prev);
 			continue;
 		}
 		if (x == 2)
 		{
-			printf(", %jd", curr);
+			printf(", %lu", curr);
 			continue;
 		}
 
 		curr += prev;
 		prev = curr - prev;
 
-		printf(", %jd", curr);
+		printf(", %lu", curr);
 	}
 	printf("\n");
 
