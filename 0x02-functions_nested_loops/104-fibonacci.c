@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdint.h>
+#include <limits.h>
 
 /**
  * main - Prints the fibonacci sequence
@@ -7,9 +7,9 @@
  */
 int main(void)
 {
-	int x;
-	unsigned long int prev = 1;
-	unsigned long int curr = 2;
+	unsigned long int prev_div, prev_rem, prev = 1, curr = 2;
+	unsigned long int div = 0, rem = 0;
+	unsigned int x, max_reached = 0;
 
 	for (x = 1; x <= 98; x++)
 	{
@@ -21,15 +21,31 @@ int main(void)
 		if (x == 2)
 		{
 			printf(", %lu", curr);
+			printf("%lu\n", ULONG_MAX);
 			continue;
 		}
-
-		curr += prev;
-		prev = curr - prev;
-
-		printf(", %lu", curr);
+		if ((curr + prev) > ULONG_MAX)
+		{
+			if (max_reached == 0)
+			{
+				prev_div = (curr + prev) / 10000000000;
+				prev_rem = (curr + prev) % 10000000000;
+				max_reached = 1;
+				printf("sugar\n\n");
+			}
+			div = (prev_div + prev_rem) / 10000000000;
+			rem = (prev_div + prev_rem) % 10000000000;
+			prev_div = (div + rem) / 10000000000;
+			prev_rem = (div + rem) % 10000000000;
+			printf(", %luWWW%lu\n\n", div, rem);
+		}
+		else
+		{
+			curr += prev;
+			prev = curr - prev;
+			printf(", %lu", curr);
+		}
 	}
 	printf("\n");
-
 	return (0);
 }
