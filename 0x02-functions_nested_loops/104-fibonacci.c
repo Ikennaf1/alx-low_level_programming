@@ -11,7 +11,7 @@ int main(void)
 	unsigned long int div = 0, rem = 0;
 	unsigned int x = 0;
 
-	for (x = 1; x <= 91; x++)
+	for (x = 1; x < 91; x++)
 	{
 		if (x == 1)
 		{
@@ -31,7 +31,7 @@ int main(void)
 	prev_rem = prev % 1000000000;
 	div = curr / 1000000000;
 	rem = curr % 1000000000;
-	for (x = 92; x <= 98; x++)
+	for (x = 92; x < 99; x++)
 	{
 		printf(", %lu", div + (rem / 1000000000));
 		printf("%lu", rem % 1000000000);
