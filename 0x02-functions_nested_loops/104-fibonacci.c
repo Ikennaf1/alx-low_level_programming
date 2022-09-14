@@ -38,7 +38,7 @@ int main(void)
 		rem += prev_rem;
 		prev_rem = rem - prev_rem;
 		printf(", %lu", div + (rem / 1000000000));
-		printf("%lu", rem % 1000000000);	
+		printf("%lu", rem % 1000000000);
 	}
 	printf("\n");
 	return (0);
