@@ -21,7 +21,6 @@ int main(void)
 		if (x == 2)
 		{
 			printf(", %lu", curr);
-			printf("%lu\n", ULONG_MAX);
 			continue;
 		}
 		if ((curr + prev) > ULONG_MAX)
@@ -31,13 +30,12 @@ int main(void)
 				prev_div = (curr + prev) / 10000000000;
 				prev_rem = (curr + prev) % 10000000000;
 				max_reached = 1;
-				printf("sugar\n\n");
 			}
 			div = (prev_div + prev_rem) / 10000000000;
 			rem = (prev_div + prev_rem) % 10000000000;
 			prev_div = (div + rem) / 10000000000;
 			prev_rem = (div + rem) % 10000000000;
-			printf(", %luWWW%lu\n\n", div, rem);
+			printf(", %lu%lu", div, rem);
 		}
 		else
 		{
