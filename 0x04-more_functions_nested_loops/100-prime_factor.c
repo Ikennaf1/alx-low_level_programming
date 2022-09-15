@@ -3,7 +3,7 @@
 
 /**
  * main - Entry point
- * Return - Largest prime factor
+ * Return: - Largest prime factor
  */
 int main(void)
 {
