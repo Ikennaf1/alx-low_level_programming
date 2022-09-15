@@ -5,6 +5,7 @@
  * @c: input character
  * Return: Returns 1 if characer is upper case
  */
+
 int _isupper(char c)
 {
 	if (c >= 65 && c <= 90)
@@ -14,4 +15,3 @@ int _isupper(char c)
 
 	return (0);
 }
-
