@@ -1,32 +1,25 @@
 #include <stdio.h>
+#include <math.h>
 
 /**
  * main - Entry point
  * Return - Largest prime factor
  */
-int main()
+int main(void)
 {
-	unsigned long int num = 410;
-	unsigned long int active_num = num / 2;
-	unsigned long int temp, x;
-	unsigned long int largest_prime = 2;
+	long x, maxf;
+	long number = 612852475143;
+	double square = sqrt(number);
 
-	for (; active_num > 0; active_num = temp)
+	for (x = 1; x <= square; x++)
 	{
-		temp = 0;
-		for (x = active_num; x > 1; x--)
+		if (number % x == 0)
 		{
-			if (num % x == 0)
-			{
-				temp = x + 1;
-				printf("%lu\n", temp);
-				break;
-			}
-		}
-		if (temp == 0)
-		{
-			printf("Prime factor is %lu", active_num);
-			break;
+			maxf = number / x;
 		}
 	}
+
+	printf("%ld\n", maxf);
+
+	return (0);
 }
