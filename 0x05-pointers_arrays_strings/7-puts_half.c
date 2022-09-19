@@ -8,22 +8,18 @@
 void puts_half(char *str)
 {
 	int strcount = 0;
+	char *p;
+	p = str;
 
-	while (*str != '\0')
+	while (*p != '\0')
 	{
 		strcount++;
-		str++;
+		p++;
 	}
-
-	printf("%d\n", strcount);
 
 	strcount = strcount % 2 == 0 ? strcount / 2 : (strcount - 1) / 2;
 
-	printf("%d\n", strcount);
-
 	str = str + strcount;
-
-	printf("%s", str);
 
 	while (*str != '\0')
 	{
