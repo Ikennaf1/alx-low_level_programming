@@ -8,32 +8,34 @@
 void rev_string(char *s)
 {
 	int index = 0;
-	char *rev_string, *a;
+	char temp[512];
+	char *rev_string;
+	char *a;
 
+	/* Count num items */
 	while (s[index] != '\0')
 	{
 		index++;
 	}
 
-	rev_string = &(s[index + 1]);
 	index--;
+	rev_string = temp;
 	a = rev_string;
 
 	while (index >= 0)
 	{
 		*rev_string = s[index];
-		index--;
 		rev_string++;
+		index--;
 	}
 
+	index = 0;
 	*rev_string = '\0';
-	rev_string = a;
-	index++;
 
-	while (rev_string[index] != '\0')
+	while (*a != '\0')
 	{
-		*s = *rev_string;
-		s++;
-		rev_string++;
+		s[index] = *a;
+		a++;
+		index++;
 	}
 }
