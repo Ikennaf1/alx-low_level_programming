@@ -8,7 +8,7 @@
 int _atoi(char *s)
 {
 	int sign = 1;
-	int final_num = 0;
+	unsigned int final_num = 0;
 	int found_int = 0;
 
 	while (*s != '\0')
@@ -29,7 +29,7 @@ int _atoi(char *s)
 		else if (*s == 43)
 		{
 			s++;
-			continue;;
+			continue;
 		}
 		else
 		{
