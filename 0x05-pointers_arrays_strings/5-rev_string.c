@@ -15,7 +15,7 @@ void rev_string(char *s)
 		index++;
 	}
 
-	rev_string = &(s[index]);
+	rev_string = &(s[index + 1]);
 	index--;
 	a = rev_string;
 
@@ -28,6 +28,7 @@ void rev_string(char *s)
 
 	*rev_string = '\0';
 	rev_string = a;
+	index++;
 
 	while (rev_string[index] != '\0')
 	{

@@ -18,6 +18,8 @@ void puts_half(char *str)
 		p++;
 	}
 
+	strcount += 1;
+
 	strcount = strcount % 2 == 0 ? strcount / 2 : (strcount - 1) / 2;
 
 	str = str + strcount;
