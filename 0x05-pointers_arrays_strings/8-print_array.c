@@ -22,4 +22,6 @@ void print_array(int *a, int n)
 		printf(", ");
 		index++;
 	}
+
+	printf("\n");
 }

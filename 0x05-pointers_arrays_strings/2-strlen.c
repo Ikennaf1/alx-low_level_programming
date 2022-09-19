@@ -10,12 +10,11 @@ int _strlen(char *s)
 	int count = 0;
 	char *p = s;
 
-	do
+	while (*p != '\0')
 	{
 		count++;
 		p++;
 	}
-	while (*p != '\0');
 
 	return count;
 }
