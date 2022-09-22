@@ -15,10 +15,19 @@ int _strcmp(char *s1, char *s2)
 	b = s2;
 
 	while (*a != '\0')
+	{
 		count_a++;
+		a++;
+	}
 
 	while (*b != '\0')
+	{
 		count_b++;
+		b++;
+	}
+
+	a = s1;
+	b = s2;
 
 	if (count_a > count_b)
 		max = count_a;
