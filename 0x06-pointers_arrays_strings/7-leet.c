@@ -2,7 +2,7 @@
 
 /**
  * leet - Modifies a string to leet string
- * @s - The string input
+ * @s: The string input
  * Return: String modified
  */
 char *leet(char *s)

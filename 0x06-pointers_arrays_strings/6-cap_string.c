@@ -17,6 +17,11 @@ void uc(char *s)
 	}
 }
 
+/**
+ * cap_string - Capitalize each word
+ * @s: input string
+ * Return: Modified strig
+ */
 char *cap_string(char *s)
 {
 	char *p;
