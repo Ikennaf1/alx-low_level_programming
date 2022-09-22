@@ -54,7 +54,6 @@ char *cap_string(char *s)
 			case '}':
 				cap = 1;
 				break;
-			default:
 		}
 		p++;
 	}
