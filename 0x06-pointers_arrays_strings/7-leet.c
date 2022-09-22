@@ -10,7 +10,7 @@ char *leet(char *s)
 	char *p;
 	int a = 0, swap_count = 5;
 	char letter[5] = {'A', 'E', 'O', 'T', 'L'};
-	char swap[5] = {'4', '3', '0', '7'};
+	char swap[5] = {'4', '3', '0', '7', '1'};
 
 	p = s;
 
@@ -20,9 +20,10 @@ char *leet(char *s)
 
 		while (a < swap_count)
 		{
-			if (*p == letter[a] || *p - 32 == letter[a])
+			if (*p == letter[a] || ((*p - 32) == letter[a]))
 			{
 				*p = swap[a];
+				break;
 			}
 			a++;
 		}
