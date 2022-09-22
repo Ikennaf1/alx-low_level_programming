@@ -34,16 +34,19 @@ void print_buffer(char *b, int size)
 			}
 			r = p;
 			printf(" ");
-			for (x = 0; x < 10; x++)
+			for (x = 0; x < 10; x++, p = q)
 			{
 				if (r >= q)
 					continue;
 				*r = isprint((unsigned int) *r) == 0 ? '.' : *r;
 				printf("%c", *(r++));
 			}
-			p = q;
 		}
 		printf("\n");
 		char_count += bulk;
+	}
+	if (size <= 0)
+	{
+		printf("\n");
 	}
 }
