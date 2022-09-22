@@ -9,36 +9,34 @@
 int _strcmp(char *s1, char *s2)
 {
 	char *a, *b;
-	int result;
+	int result = 0, max = 0, count_a = 0, count_b = 0;
 
 	a = s1;
 	b = s2;
 
-	while ((*(a++) != '\0') && (*(b++) != '\0'))
+	while (*a != '\0')
+		count_a++;
+
+	while (*b != '\0')
+		count_b++;
+
+	if (count_a > count_b)
+		max = count_a;
+	else
+		max = count_b;
+
+	while (max > 0)
 	{
-		if ((*a == '\0') && (*b != '\0'))
+		if (*a == *b)
 		{
-			result = -15;
-			break;
+			a++;
+			b++;
+			max--;
+			continue;
 		}
-		else if (*a != '\0' && *b == '\0')
+		else
 		{
-			result = 15;
-			break;
-		}
-		if (*a < *b)
-		{
-			result = -15;
-			break;
-		}
-		else if (*a == *b)
-		{
-			result = 0;
-		}
-		else if (*a > *b)
-		{
-			result = 15;
-			break;
+			result = *a - *b;
 		}
 	}
 
