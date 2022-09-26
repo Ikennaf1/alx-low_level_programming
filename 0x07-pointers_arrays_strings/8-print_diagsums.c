@@ -13,7 +13,7 @@ void print_diagsums(int *a, int size)
 	for (b = 0; b < size; b++)
 	{
 		se_sum += a[(size + 1) * b];
-		sw_sum += a[(size - 1) * b];
+		sw_sum += a[(size - 1) * (b + 1)];
 	}
 
 	printf("%i, %i\n", se_sum, sw_sum);
