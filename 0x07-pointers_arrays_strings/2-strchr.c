@@ -15,12 +15,9 @@ char *_strchr(char *s, char c)
 	while (*p != '\0')
 	{
 		if (*p == c)
-		{
-			s = p;
-			return (s);
-		}
+			return (p);
 		p++;
 	}
 
-	return ('\0');
+	return (p);
 }
