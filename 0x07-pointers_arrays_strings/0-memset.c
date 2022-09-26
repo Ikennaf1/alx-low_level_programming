@@ -2,6 +2,7 @@
 
 /**
  * _memset - fills first n bytes of memory area with specified character
+ * @s: String to replace
  * @b: The character
  * @n: Number of bytes to be filled
  * Return: Pointer to the memory area
