@@ -8,25 +8,13 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int count = 0, n = 0, se_sum = 0, sw_sum = 0;
+	int b, se_sum = 0, sw_sum = 0;
 	
-	while (count < size)
+	for (b = 0; b < size; b++)
 	{
-		se_sum += *(a + n);
-		n += (size + 1);
-		count++;
+		se_sum += a[(size + 1) * b];
+		sw_sum += a[(size - 1) * b];
 	}
 
-	count = 0;
-	n = (size - 1);
-
-	while (count < size)
-	{
-		sw_sum += *(a + n);
-		n += (size - 1);
-		count++;
-	}
-
-	printf("%i, ", se_sum);
-	printf(" %i\n", sw_sum);
+	printf("%i, %i\n", se_sum, sw_sum);
 }
