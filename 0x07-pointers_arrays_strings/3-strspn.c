@@ -6,7 +6,7 @@
  * @accept: String to search
  * Return: Number of bytes that matches
  */
-unsigned int _strspn (char *s, char *accept)
+unsigned int _strspn(char *s, char *accept)
 {
 	char *p;
 	unsigned int count = 0;
