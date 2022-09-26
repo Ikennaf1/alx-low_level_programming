@@ -20,23 +20,11 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (*accept == *p)
 			{
-				if (p > store)
-				{
-					p++;
-					continue;
-				}
-				store = p;
+				return (p);
 			}
 			p++;
 		}
 		accept++;
 	}
-	if (*store)
-	{
-		return (store);
-	}
-	else
-	{
-		return (NULL);
-	}
+	return ('\0');
 }
