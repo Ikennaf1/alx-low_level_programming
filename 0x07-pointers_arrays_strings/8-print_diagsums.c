@@ -9,7 +9,7 @@
 void print_diagsums(int *a, int size)
 {
 	int b, se_sum = 0, sw_sum = 0;
-	
+
 	for (b = 0; b < size; b++)
 	{
 		se_sum += a[(size + 1) * b];
