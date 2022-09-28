@@ -13,7 +13,7 @@ int prime_(int i, int n)
 	if (n % i == 0)
 		return (0);
 	else
-		prime(next_num, n);
+		prime_(next_num, n);
 
 	return (1);
 }
