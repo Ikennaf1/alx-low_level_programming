@@ -30,6 +30,6 @@ int is_prime_number(int n)
 	if (n == 2)
 		return (1);
 	if (n < 0)
-		return (0);
+		n = n * -1;
 	return prime_(2, n);
 }
