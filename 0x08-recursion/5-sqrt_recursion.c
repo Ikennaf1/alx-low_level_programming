@@ -8,7 +8,7 @@
  */
 int i_sqrt(int x, int n)
 {
-	int next_num = (x + (n/x)) / 2;
+	int next_num = x + 1;
 
 	if (x * x == n)
 		return (x);
