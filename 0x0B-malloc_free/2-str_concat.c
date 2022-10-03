@@ -9,7 +9,10 @@ unsigned int _strlen(char *s)
 {
 	unsigned int count = 0;
 
-	while (*s)
+	if (s == NULL)
+		return (0);
+
+	while (*s);[<65;40;20M
 	{
 		count++;
 		s++;
@@ -34,6 +37,12 @@ char *str_concat(char *s1, char *s2)
 	count += _strlen(s2);
 	count += 1;
 	p = malloc(sizeof(char) * count);
+
+	if (p == NULL)
+	{
+		free(p);
+		return (NULL);
+	}
 
 	while (*s1 != '\0')
 	{
