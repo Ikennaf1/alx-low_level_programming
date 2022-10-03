@@ -33,6 +33,11 @@ char *str_concat(char *s1, char *s2)
 	unsigned int count = 0;
 	int x = 0;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
 	count += _strlen(s1);
 	count += _strlen(s2);
 	count += 1;
@@ -44,14 +49,14 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
-	while (*s1 != NULL)
+	while (*s1)
 	{
 		p[x] = *s1;
 		x++;
 		s1++;
 	}
 
-	while (*s2 != NULL)
+	while (*s2)
 	{
 		p[x] = *s2;
 		x++;
