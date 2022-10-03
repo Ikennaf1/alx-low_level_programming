@@ -27,10 +27,12 @@ char *_strdup(char *str)
 {
 	char *p;
 	unsigned int count;
-	unsigned int string_length = _strlen(str);
+	unsigned int string_length;
 
 	if (str == NULL)
 		return (NULL);
+
+	string_length = _strlen(str);
 
 	p = malloc(1 + (sizeof(char) * string_length));
 
