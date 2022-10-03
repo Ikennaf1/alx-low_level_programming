@@ -29,13 +29,16 @@ char *_strdup(char *str)
 	unsigned int count;
 	unsigned int string_length = _strlen(str);
 
-	if (!str)
-		return (NULL);
-
 	if (str == NULL)
 		return (NULL);
 
 	p = malloc(1 + (sizeof(char) * string_length));
+
+	if (p == NULL)
+	{
+		free(p);
+		return (NULL);
+	}
 
 	for (count = 0; count < string_length; count++, str++)
 		p[count] = *str;
