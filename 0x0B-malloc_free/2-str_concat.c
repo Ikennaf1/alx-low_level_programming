@@ -44,14 +44,14 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
-	while (*s1)
+	while (*s1 != NULL)
 	{
 		p[x] = *s1;
 		x++;
 		s1++;
 	}
 
-	while (*s2)
+	while (*s2 != NULL)
 	{
 		p[x] = *s2;
 		x++;
