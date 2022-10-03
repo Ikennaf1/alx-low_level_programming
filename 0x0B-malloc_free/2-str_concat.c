@@ -12,7 +12,7 @@ unsigned int _strlen(char *s)
 	if (s == NULL)
 		return (0);
 
-	while (*s);[<65;40;20M
+	while (*s)
 	{
 		count++;
 		s++;
