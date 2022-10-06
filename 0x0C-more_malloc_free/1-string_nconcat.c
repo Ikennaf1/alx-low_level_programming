@@ -12,6 +12,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *p, *s;
 	unsigned int s1count = 0, s2count = 0;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = ""
+
 	s = s1;
 	while (*s)
 	{
@@ -32,10 +37,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	s = p;
 	if (n >= s2count)
 		n = s2count;
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
 
 	for (; s1count > 0; s1count--, s1++, s++)
 
