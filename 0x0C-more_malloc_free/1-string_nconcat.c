@@ -39,7 +39,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = s2count;
 
 	for (; s1count > 0; s1count--, s1++, s++)
-
 		*s = *s1;
 
 	for (s2count = 0; s2count < n; s2count++, s++, s2++)
