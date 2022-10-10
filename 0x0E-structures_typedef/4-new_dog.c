@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "dog.h"
 
 int _strlen(char *s);
