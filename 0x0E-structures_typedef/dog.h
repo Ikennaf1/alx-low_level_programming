@@ -1,3 +1,6 @@
+#ifndef _HEADER_
+#define _HEADER_
+
 /**
  * struct dog - Dog struct
  * @name: Name of dog
@@ -17,3 +20,5 @@ struct dog
  * dog_t - Typedef for dog struct
  */
 typedef struct dog dog_t;
+
+#endif
