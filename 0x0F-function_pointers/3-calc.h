@@ -1,6 +1,12 @@
 #ifndef _CALC_
 #define _CALC_
 
+/**
+ * struct op - Struct op
+ *
+ * @op: The operator
+ * @f: The asscociated function
+ */
 typedef struct op
 {
 	char *op;
