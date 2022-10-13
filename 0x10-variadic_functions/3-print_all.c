@@ -9,12 +9,13 @@ void print_all(const char * const format, ...)
 	va_list ap;
 	format_options fo[] = {
 		{"c", _print_char},
-		{"f", _print_float},
 		{"i", _print_int},
+		{"f", _print_float},
 		{"s", _print_str},
 		{NULL, NULL}
 	};
-	unsigned int i = 0, j = 0;
+	unsigned int i = 0;
+	unsigned int j = 0;
 	char *separator = "";
 
 	while (format != NULL && format[i])
