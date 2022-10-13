@@ -69,7 +69,7 @@ void _print_float(char *separator, va_list ap)
 }
 
 /**
- * _print_str - Prints a String
+ * _print_str - Prints a iString
  * @separator: ...
  * @ap: the args
  * Return: Nothing
@@ -83,9 +83,8 @@ void _print_str(char *separator, va_list ap)
 	if (str == NULL)
 	{
 		printf("%s%s", separator, "(nil)");
+		return;
 	}
-	else
-	{
-		printf("%s%s", separator, str);
-	}
+
+	printf("%s%s", separator, str);
 }
