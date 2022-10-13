@@ -11,7 +11,8 @@ void print_all(const char * const format, ...)
 		{"c", _print_char},
 		{"f", _print_float},
 		{"i", _print_int},
-		{"s", _print_str}
+		{"s", _print_str},
+		{NULL, NULL}
 	};
 	unsigned int i = 0, j = 0;
 	char *separator = "";
