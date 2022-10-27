@@ -9,25 +9,22 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned int x = 0;
-	char bit[64];
 
-	if (n == 0)
-		return (0);
-
-
-	while (n != 0)
+	while (n)
 	{
-		if ((n ^ 1) == (n + 1))
-			bit[x] = 0;
-		else
-			bit[x] = 1;
-		n = n >> 1;
-
+		if (x == index)
+		{
+			if (n % 2)
+				return (1);
+			else
+				return (0);
+		}
+		n = n / 2;
 		x++;
 	}
 
-	if (index > x)
-		return (-1);
+	if (index > x && index < 63)
+		return (0);
 
-	return (bit[index]);
+	return (-1);
 }
