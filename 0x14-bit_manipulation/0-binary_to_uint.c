@@ -26,28 +26,20 @@ unsigned int _strlen(const char *s)
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int num, number = 0, _len = (_strlen(b)) - 1;
-	int x, y, bit_value;
+	unsigned int count = 0, number = 0, _len = _strlen(b);
 
 	if (b == NULL)
 		return (0);
 
-	for (x = _len; x >= 0; x--)
+	while (_len--)
 	{
-		if (*b != '1' && *b != '0')
+		if (b[_len] != '0' && b[_len] != '1')
 			return (0);
 
-		num = ((int)*b) - 48;
-		y = x;
-		bit_value = (y > 0) ? 2 : 1;
-		while (y > 1)
-		{
-			bit_value *= 2;
-			y--;
-		}
+		if (b[_len] == 49)
+			number += 1 << count;
 
-		number += (num * bit_value);
-		b++;
+		count++
 	}
 	return (number);
 }
