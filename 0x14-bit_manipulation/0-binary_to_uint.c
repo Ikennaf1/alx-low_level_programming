@@ -39,7 +39,7 @@ unsigned int binary_to_uint(const char *b)
 		if (b[_len] == 49)
 			number += 1 << count;
 
-		count++
+		count++;
 	}
 	return (number);
 }
