@@ -36,10 +36,9 @@ unsigned int binary_to_uint(const char *b)
 		if (b[_len] != 48 && b[_len] != 49)
 			return (0);
 
-		if (b[_len] == 49)
-			number += 1 << count;
+		number += (b[_len] - '0') * count;
 
-		count++;
+		count *= 2;
 	}
 	return (number);
 }
