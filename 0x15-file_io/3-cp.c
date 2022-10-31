@@ -9,7 +9,10 @@
 void _copy_file(char *src, char *dest)
 {
 	int fd1, fd2, chars_read;
-	char buf[1024];
+	char *buf = malloc(1024);
+
+	if (buf == NULL)
+		exit(97);
 
 	fd1 = open(src, O_RDONLY);
 	if (!src || fd1 == -1)
@@ -27,7 +30,7 @@ void _copy_file(char *src, char *dest)
 			exit(99);
 		}
 	}
-
+	free(buf);
 	if (chars_read == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
