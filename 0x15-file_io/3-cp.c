@@ -4,9 +4,9 @@
  * _copy_file - Copies file contents to another
  * @src: Source file
  * @dest: Destination file
- * Return: 1 on success
+ * Return: Nothing
  */
-int _copy_file(char *src, char *dest)
+void _copy_file(char *src, char *dest)
 {
 	int fd1, fd2, chars_read;
 	char buf[1024];
@@ -44,8 +44,6 @@ int _copy_file(char *src, char *dest)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 		exit(100);
 	}
-
-	return (1);
 }
 
 /**
@@ -64,5 +62,5 @@ int main(int argc, char *argv[])
 
 	_copy_file(argv[1], argv[2]);
 
-	return (1);
+	exit(0);
 }
