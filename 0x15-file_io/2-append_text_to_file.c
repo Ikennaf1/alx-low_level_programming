@@ -1,6 +1,23 @@
 #include "main.h"
 
 /**
+ * _strlen - ...
+ * @s: ...
+ * Return: ...
+ */
+unsigned int _strlen(char *s)
+{
+	int count = 0;
+
+	while (*s)
+	{
+		count++;
+		s++;
+	}
+	return (count);
+}
+
+/**
  * append_text_to_file - Appends text at end of file
  * @filename: Name of file
  * @text_content: Content to append
