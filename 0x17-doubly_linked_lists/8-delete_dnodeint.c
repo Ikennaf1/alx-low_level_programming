@@ -1,5 +1,25 @@
 #include "lists.h"
+/**
+ * delfirst - ...
+ * @head: ...
+ * Return: ...
+ */
+int delfirst(dlistint_t *head)
+{
+	dlistint_t temp = *head;
 
+	if (temp->next)
+	{
+		temp->next->prev = NULL;
+		free(*head);
+		*head = temp->next;
+	}
+	else
+	{
+		*head = NULL;
+	}
+	return (1);
+}
 /**
  * delete_dnodeint_at_index - Deletes node at index
  * @head: Head of list
@@ -11,18 +31,12 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *temp;
 	unsigned int count = 0;
 
-	/*if (head == NULL || *head == NULL)
-		return (-1);*/
-
-	if (head && *head)
-	{
+	if (head == NULL || *head == NULL)
+		return (-1);
 	temp = *head;
 	if (index == 0)
 	{
-		temp->next->prev = NULL;
-		free(*head);
-		*head = temp->next;
-		return (1);
+		return (delfirst(*head));
 	}
 	while (count < index)
 	{
@@ -47,5 +61,4 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	free(temp);
 	return (1);
 	}
-	return (-1);
 }
