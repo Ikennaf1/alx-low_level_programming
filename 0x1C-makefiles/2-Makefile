@@ -1,5 +1,5 @@
 CC = gcc
-SRC = main.c main.h
+SRC = main.c m.h school.c
 OBJ = ${SRC:.c=.o}
 NAME = school
 
