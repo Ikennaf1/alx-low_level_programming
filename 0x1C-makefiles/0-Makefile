@@ -1,2 +1,2 @@
 all:
-	gcc *.c *.h -o school
+	gcc main.c main.h -o school
